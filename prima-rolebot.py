@@ -5,9 +5,9 @@ import pymongo
 
 class Prima(discord.Client):
 	def __init__(self):
-		self.config = configparser.RawConfigParser();
-		self.config.read("config");
-		self.db = pymongo.MongoClient("mongodb://localhost:27017/")[self.config.get("database_name")];
+		self.config = configparser.RawConfigParser()
+		self.config.read("config")
+		self.db = pymongo.MongoClient("mongodb://localhost:27017/")[self.config.get("database_name")]
 
 	async def on_ready(self):
 		print("Logged on as {0}!".format(self.user))
